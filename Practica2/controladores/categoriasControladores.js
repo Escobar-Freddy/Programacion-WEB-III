@@ -5,7 +5,7 @@ import {
   actualiza,
   elimina,
 } from "../modelos/categoriasModelos.js";
-
+//eje1
 export const insertacategoria = async (req, res) => {
   try {
     const categorias = await inserta(req.body);
@@ -14,7 +14,7 @@ export const insertacategoria = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje2
 export const muestraCategorias = async (req, res) => {
   try {
     const resultado = await obtTodo();
@@ -23,7 +23,7 @@ export const muestraCategorias = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje3
 export const muestracategoriasId = async (req, res) => {
   try {
     const resultado = await categoriasId(req.params.id);
@@ -32,7 +32,7 @@ export const muestracategoriasId = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje4
 export const actualizaCategoria = async (req, res) => {
   try {
     const resultado = await actualiza(req.params.id, req.body);
@@ -41,7 +41,7 @@ export const actualizaCategoria = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje5
 export const eliminaCategoria = async (req, res) => {
   try {
     await elimina(req.params.id);

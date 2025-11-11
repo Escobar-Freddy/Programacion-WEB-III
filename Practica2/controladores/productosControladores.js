@@ -5,7 +5,7 @@ import {
   actualiza,
   actualizarStock,
 } from "../modelos/productosModelo.js";
-
+//eje6
 export const insertaproducto = async (req, res) => {
   try {
     const producto = await instertapro(req.body);
@@ -14,7 +14,7 @@ export const insertaproducto = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje7
 export const muestraCategorias = async (req, res) => {
   try {
     const resultado = await obtTodo();
@@ -23,7 +23,7 @@ export const muestraCategorias = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje8
 export const muestraproductosId = async (req, res) => {
   try {
     const resultado = await productosId(req.params.id);
@@ -32,7 +32,7 @@ export const muestraproductosId = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje9
 export const actualizaproducto = async (req, res) => {
   try {
     const resultado = await actualiza(req.params.id, req.body);
@@ -41,7 +41,7 @@ export const actualizaproducto = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+//eje10
 export const cambiarStock = async (req, res) => {
   const { id } = req.params;
   const { cantidad } = req.body;
